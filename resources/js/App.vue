@@ -2,7 +2,7 @@
     <div>
         <main-header></main-header>
         <main role="main" class="v-app">
-            <router-view/>
+            <router-view></router-view>
         </main>
     </div>
 </template>

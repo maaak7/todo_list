@@ -1,4 +1,3 @@
-// import i18n from '../plugins/i18n';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
@@ -10,7 +9,7 @@ import EditCategory from '../views/categories/Edit';
 
 Vue.use(VueRouter);
 
-const DEFAULT_TITLE = 'Збараж Інфо';
+const DEFAULT_TITLE = 'TODO List';
 
 const router = new VueRouter({
     mode: 'history',
@@ -21,14 +20,6 @@ const router = new VueRouter({
             name: 'home',
             meta: {
                 title: 'Головна'
-            }
-        },
-        {
-            path: '/admin',
-            component: Home,
-            name: 'admin',
-            meta: {
-                title: 'Admin'
             }
         },
         {

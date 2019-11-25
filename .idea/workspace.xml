@@ -3,17 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="2d65f554-79a2-4d3a-82e9-6484c26b7e28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/components/Categories/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Categories/Form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/components/Frame/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Frame/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/components/Frame/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Frame/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/routes/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/Create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/Main.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,14 +133,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
+      <recent name="$PROJECT_DIR$/resources/js/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/resources/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -165,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574711231238</updated>
-      <workItem from="1574711232733" duration="4151000" />
+      <workItem from="1574711232733" duration="4873000" />
     </task>
     <servers />
   </component>
