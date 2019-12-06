@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
+    // TODO винести в сервіс
     public function create(Request $request)
     {
         $data = $request->all();
@@ -39,5 +40,11 @@ class CategoryController extends Controller
             ]);
         }
 
+    }
+
+    public function get(Request $request)
+    {
+        $categories = Category::where('user_id', Auth::id())->get();
+        return response()->json($categories);
     }
 }

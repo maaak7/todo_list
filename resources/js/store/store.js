@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import categoriesStore from './categories-store';
+import tasksStore from './tasks-store';
 import toastsStore from './toasts-store';
 
 Vue.use(Vuex);
@@ -13,6 +14,7 @@ export const store = new Vuex.Store({
 
     modules : {
         categoriesStore,
-        toastsStore
+        tasksStore,
+        toastsStore,
     }
 });

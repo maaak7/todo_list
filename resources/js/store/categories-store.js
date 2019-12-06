@@ -31,11 +31,11 @@ export default {
         },
     },
     actions: {
-        GET_CATEGORIES: async (context, payload) => {
+        GET: async (context, payload) => {
             Axios
-                .post(APP_BASE_URL + '/bds/users/get_for_table', {filter: payload})
+                .get(APP_BASE_URL + '/categories/get')
                 .then(response => {
-                    context.commit('SET_USERS', response.data);
+                    context.commit('SET_CATEGORIES', response.data);
                 }).catch((err) => {
                 console.log(err);
             });

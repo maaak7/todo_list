@@ -2003,6 +2003,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2042,21 +2049,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      taskName: ''
+      taskName: '',
+      chosenCategories: []
     };
+  },
+  created: function created() {
+    this.$store.dispatch('categoriesStore/GET');
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    categories: 'categoriesStore/CATEGORIES'
+  })),
+  watch: {
+    categories: {
+      handler: function handler(data) {
+        console.log('categories watcher');
+        console.log(data);
+      },
+      deep: true
+    }
   },
   methods: {
     createTask: function createTask() {
       console.log('ill create task');
-      /*this.$store.dispatch('categoriesStore/CREATE', {
-          name: this.taskName,
-          callback: this.afterCreate,
-      });*/
+      var data = this.getTaskData();
+      this.$store.dispatch('tasksStore/CREATE', {
+        data: data,
+        callback: this.afterCreate
+      });
+    },
+    getTaskData: function getTaskData() {
+      return {
+        name: this.taskName,
+        categories: this.chosenCategories
+      };
     },
     afterCreate: function afterCreate(response) {
       console.log('afterCreate'); // this.$store.commit('toastsStore/SET_TOAST', response.message);
@@ -68752,7 +68781,50 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _vm._m(1)
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Categories")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.chosenCategories,
+                      expression: "chosenCategories"
+                    }
+                  ],
+                  staticClass: "custom-select",
+                  attrs: { multiple: "" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.chosenCategories = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
+                    }
+                  }
+                },
+                _vm._l(_vm.categories, function(item) {
+                  return _c("option", { domProps: { value: item.id } }, [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(item.name) +
+                        "\n                        "
+                    )
+                  ])
+                }),
+                0
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "modal-footer" }, [
@@ -68760,7 +68832,7 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-success",
-                attrs: { type: "button", "data-dismiss": "modal" },
+                attrs: { type: "button" },
                 on: { click: _vm.createTask }
               },
               [_vm._v("\n                    Create\n                ")]
@@ -68795,26 +68867,6 @@ var staticRenderFns = [
         },
         [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Categories")]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select", attrs: { multiple: "" } }, [
-        _c("option", { attrs: { selected: "" } }, [
-          _vm._v("Open this select menu")
-        ]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("One")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "2" } }, [_vm._v("Two")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "3" } }, [_vm._v("Three")])
-      ])
     ])
   }
 ]
@@ -85723,15 +85775,13 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   actions: {
-    GET_CATEGORIES: function GET_CATEGORIES(context, payload) {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function GET_CATEGORIES$(_context) {
+    GET: function GET(context, payload) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function GET$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(APP_BASE_URL + '/bds/users/get_for_table', {
-                filter: payload
-              }).then(function (response) {
-                context.commit('SET_USERS', response.data);
+              axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(APP_BASE_URL + '/categories/get').then(function (response) {
+                context.commit('SET_CATEGORIES', response.data);
               })["catch"](function (err) {
                 console.log(err);
               });
@@ -85770,7 +85820,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _categories_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./categories-store */ "./resources/js/store/categories-store.js");
-/* harmony import */ var _toasts_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./toasts-store */ "./resources/js/store/toasts-store.js");
+/* harmony import */ var _tasks_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tasks-store */ "./resources/js/store/tasks-store.js");
+/* harmony import */ var _toasts_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./toasts-store */ "./resources/js/store/toasts-store.js");
+
 
 
 
@@ -85783,7 +85835,71 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   actions: {},
   modules: {
     categoriesStore: _categories_store__WEBPACK_IMPORTED_MODULE_2__["default"],
-    toastsStore: _toasts_store__WEBPACK_IMPORTED_MODULE_3__["default"]
+    tasksStore: _tasks_store__WEBPACK_IMPORTED_MODULE_3__["default"],
+    toastsStore: _toasts_store__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/tasks-store.js":
+/*!*******************************************!*\
+  !*** ./resources/js/store/tasks-store.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: {
+    tasks: []
+  },
+  getters: {
+    TASKS: function TASKS(state) {
+      return state.tasks;
+    }
+  },
+  mutations: {
+    SET_TASKS: function SET_TASKS(state, payload) {
+      state.tasks = payload;
+    }
+  },
+  actions: {
+    GET: function GET(context, payload) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function GET$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(APP_BASE_URL + '/tasks/get').then(function (response) {
+                context.commit('SET_TASKS', response.data);
+              })["catch"](function (err) {
+                console.log(err);
+              });
+
+            case 1:
+            case "end":
+              return _context.stop();
+          }
+        }
+      });
+    },
+    CREATE: function CREATE(context, payload) {
+      console.log('CREATE task store');
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(APP_BASE_URL + '/tasks/create', payload.data).then(function (response) {
+        console.log(response.data);
+        payload.callback(response.data);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
   }
 });
 

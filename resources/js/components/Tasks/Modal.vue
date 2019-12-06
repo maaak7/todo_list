@@ -17,11 +17,10 @@
                     <div class="form-group">
                         <label>Categories</label>
 
-                        <select class="custom-select" multiple>
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <select v-model="chosenCategories" class="custom-select" multiple>
+                            <option v-for="item in categories" :value="item.id">
+                                {{ item.name }}
+                            </option>
                         </select>
                     </div>
                 </div>
@@ -29,7 +28,6 @@
                     <button
                         type="button"
                         class="btn btn-success"
-                        data-dismiss="modal"
                         @click="createTask">
                         Create
                     </button>
@@ -40,21 +38,50 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex';
+
     export default {
         data() {
             return {
-                taskName: ''
+                taskName: '',
+                chosenCategories: []
+            }
+        },
+
+        created() {
+            this.$store.dispatch('categoriesStore/GET');
+        },
+
+        computed: {
+            ...mapGetters({categories: 'categoriesStore/CATEGORIES'}),
+        },
+
+        watch: {
+            categories: {
+                handler(data) {
+                    console.log('categories watcher');
+                    console.log(data);
+                },
+                deep: true
             }
         },
 
         methods: {
             createTask() {
                 console.log('ill create task');
+                let data = this.getTaskData();
 
-                /*this.$store.dispatch('categoriesStore/CREATE', {
-                    name: this.taskName,
+                this.$store.dispatch('tasksStore/CREATE', {
+                    data: data,
                     callback: this.afterCreate,
-                });*/
+                });
+            },
+
+            getTaskData() {
+                return {
+                    name: this.taskName,
+                    categories: this.chosenCategories
+                }
             },
 
             afterCreate(response) {

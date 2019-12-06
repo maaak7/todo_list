@@ -21,11 +21,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'categories', 'middleware' => 'verified'], function () {
     Route::post('/create', 'CategoryController@create');
+    Route::get('/get', 'CategoryController@get');
     Route::get('/{any?}', 'HomeController@index');
 });
 
 Route::group(['prefix' => 'tasks', 'middleware' => 'verified'], function () {
-//    Route::post('/', 'TaskController@create');
+    Route::post('/create', 'TaskController@create');
     Route::get('/{any?}', 'HomeController@index');
 });
 
