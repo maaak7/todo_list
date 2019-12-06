@@ -2,10 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from '../views/Home';
-import Categories from '../views/categories/Main';
-import CategoriesList from '../views/categories/List';
-import CreateCategory from '../views/categories/Create';
-import EditCategory from '../views/categories/Edit';
+import Tasks from '../views/tasks/Main';
+import TasksList from '../views/tasks/List';
 
 Vue.use(VueRouter);
 
@@ -23,28 +21,14 @@ const router = new VueRouter({
             }
         },
         {
-            path: '/categories',
-            component: Categories,
+            path: '/tasks',
+            component: Tasks,
             children: [{
-                path: 'list',
-                name: 'categories_list',
-                component: CategoriesList,
+                path: '/',
+                name: 'tasks',
+                component: TasksList,
                 meta: {
-                    title: 'Список категорій'
-                }
-            }, {
-                path: 'create',
-                name: 'create_category',
-                component: CreateCategory,
-                meta: {
-                    title: 'Створення категорії'
-                }
-            }, {
-                path: 'edit/:id',
-                name: 'edit_category',
-                component: EditCategory,
-                meta: {
-                    title: 'Редагування категорії'
+                    title: 'Tasks list'
                 }
             }],
         }

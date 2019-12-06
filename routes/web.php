@@ -14,20 +14,22 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes(['verify' => true]);
 
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'categories', 'middleware' => 'verified'], function () {
-    Route::get('/edit/{id}', 'HomeController@index');
+    Route::post('/create', 'CategoryController@create');
     Route::get('/{any?}', 'HomeController@index');
 });
 
-Route::group(['prefix' => 'categories'], function () {
-    Route::get('/edit/{id}', 'HomeController@index');
+Route::group(['prefix' => 'tasks', 'middleware' => 'verified'], function () {
+//    Route::post('/', 'TaskController@create');
     Route::get('/{any?}', 'HomeController@index');
 });
+
+//Route::group(['prefix' => 'categories'], function () {
+//    Route::get('/edit/{id}', 'HomeController@index');
+//    Route::get('/{any?}', 'HomeController@index');
+//});

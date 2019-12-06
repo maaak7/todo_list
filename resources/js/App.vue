@@ -4,24 +4,21 @@
         <main role="main" class="v-app">
             <router-view></router-view>
         </main>
+        <bootstrap-toast/>
     </div>
 </template>
 
 <script>
+    import BootstrapToast from "./components/Toast"
     import MainHeader from "./components/Frame/Header"
 
     export default {
         components: {
+            BootstrapToast,
             MainHeader,
-        },
-
-        mounted() {
-            console.log('hello');
         },
     };
 </script>
-
-<!--<style src="../css/vuetify.min.css"></style>-->
 
 <style>
     .container.fluid{

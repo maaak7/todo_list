@@ -2,36 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d65f554-79a2-4d3a-82e9-6484c26b7e28" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/swipeks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/swipeks.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/components/Categories/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Categories/Form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/components/Frame/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Frame/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/components/Frame/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Frame/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/routes/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/Create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/Edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/js/views/categories/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/categories/Main.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Categories/Form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Frame/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Frame/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routes/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/categories/Create.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/categories/Edit.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="swipeks_db: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="swipeks_db: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,39 +165,52 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/store" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js" />
-      <recent name="$PROJECT_DIR$/resources/js/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/store" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
+      <recent name="$PROJECT_DIR$/resources/js/components" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -175,7 +222,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574711231238</updated>
-      <workItem from="1574711232733" duration="4873000" />
+      <workItem from="1574711232733" duration="5599000" />
+      <workItem from="1575388089572" duration="5185000" />
+      <workItem from="1575473371814" duration="650000" />
+      <workItem from="1575566593609" duration="1415000" />
+      <workItem from="1575662442060" duration="444000" />
+      <workItem from="1575662903014" duration="100000" />
+      <workItem from="1575663018166" duration="7363000" />
     </task>
     <servers />
   </component>
@@ -187,10 +240,38 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="308" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575663081158">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="308" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/60.27.1306.741@60.27.1306.741" timestamp="1575663081158" />
+    <state x="60" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575665707836">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="60" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/60.27.1306.741@60.27.1306.741" timestamp="1575665707836" />
+    <state x="496" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575574647611">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="496" y="155" width="424" height="491" key="FileChooserDialogImpl/60.27.1306.741@60.27.1306.741" timestamp="1575574647611" />
+    <state x="224" y="31" width="977" height="737" key="SettingsEditor" timestamp="1575663000082">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="224" y="31" width="977" height="737" key="SettingsEditor/60.27.1306.741@60.27.1306.741" timestamp="1575663000082" />
+    <state x="577" y="163" width="262" height="475" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1575663140502">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="577" y="163" width="262" height="475" key="com.intellij.database.view.ui.DbObjectDialog/60.27.1306.741@60.27.1306.741" timestamp="1575663140502" />
+    <state x="405" y="145" width="615" height="504" key="find.popup" timestamp="1575667950285">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="405" y="145" width="615" height="504" key="find.popup/60.27.1306.741@60.27.1306.741" timestamp="1575667950285" />
   </component>
 </project>
