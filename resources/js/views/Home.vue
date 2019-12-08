@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>hello, kitty</h1>
+        <pre class="my-hello">Hello, this is my test. You can go to My tasks to see how it works :)</pre>
     </div>
 </template>
 
@@ -11,3 +11,11 @@
         }
     }
 </script>
+
+<style>
+    .my-hello {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+</style>

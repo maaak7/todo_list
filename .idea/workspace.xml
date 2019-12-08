@@ -3,22 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d65f554-79a2-4d3a-82e9-6484c26b7e28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CategoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CategoryService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/TaskService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/TaskService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Categories/Modal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Categories/Modal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Tasks/Modal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Tasks/Modal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Toast.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/tasks-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/tasks-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/categories/List.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/categories/Main.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/tasks/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/tasks/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +205,7 @@
       <workItem from="1575662442060" duration="444000" />
       <workItem from="1575662903014" duration="100000" />
       <workItem from="1575663018166" duration="17574000" />
-      <workItem from="1575760500943" duration="4327000" />
+      <workItem from="1575760500943" duration="5060000" />
     </task>
     <servers />
   </component>
@@ -268,9 +254,9 @@
       <screen x="60" y="27" width="1306" height="741" />
     </state>
     <state x="366" y="27" width="683" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/60.27.1306.741@60.27.1306.741" timestamp="1575799085945" />
-    <state x="405" y="145" width="615" height="504" key="find.popup" timestamp="1575670828298">
+    <state x="405" y="145" width="615" height="504" key="find.popup" timestamp="1575800069477">
       <screen x="60" y="27" width="1306" height="741" />
     </state>
-    <state x="405" y="145" width="615" height="504" key="find.popup/60.27.1306.741@60.27.1306.741" timestamp="1575670828298" />
+    <state x="405" y="145" width="615" height="504" key="find.popup/60.27.1306.741@60.27.1306.741" timestamp="1575800069477" />
   </component>
 </project>
