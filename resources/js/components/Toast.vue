@@ -18,7 +18,7 @@
     export default {
         data() {
             return {
-                text: 'hello, world'
+                text: ''
             }
         },
 
@@ -42,8 +42,8 @@
     .bootstrap-toast {
         display: none;
         position: absolute;
-        top: 70px;
-        right: 15px;
+        top: 10px;
+        right: calc(50% - 135px);
     }
 
     .bootstrap-toast .toast {

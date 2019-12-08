@@ -28,11 +28,18 @@ export default {
         },
 
         CREATE: (context, payload) => {
-            console.log('CREATE task store');
             Axios.post(APP_BASE_URL + '/tasks/create', payload.data)
                 .then(response => {
-                    console.log(response.data);
                     payload.callback(response.data);
+                }).catch(err => {
+                console.log(err);
+            });
+        },
+
+        CHANGE_STATUS: (context, payload) => {
+            Axios.post(APP_BASE_URL + '/tasks/change_status', {task_id: payload.taskID})
+                .then(response => {
+                    console.log(response.data);
                 }).catch(err => {
                 console.log(err);
             });

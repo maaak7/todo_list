@@ -28,6 +28,7 @@
                     <button
                         type="button"
                         class="btn btn-success"
+                        data-dismiss="modal"
                         @click="createTask">
                         Create
                     </button>
@@ -56,19 +57,8 @@
             ...mapGetters({categories: 'categoriesStore/CATEGORIES'}),
         },
 
-        watch: {
-            categories: {
-                handler(data) {
-                    console.log('categories watcher');
-                    console.log(data);
-                },
-                deep: true
-            }
-        },
-
         methods: {
             createTask() {
-                console.log('ill create task');
                 let data = this.getTaskData();
 
                 this.$store.dispatch('tasksStore/CREATE', {
@@ -85,8 +75,8 @@
             },
 
             afterCreate(response) {
-                console.log('afterCreate');
-                // this.$store.commit('toastsStore/SET_TOAST', response.message);
+                this.$store.dispatch('tasksStore/GET');
+                this.$store.commit('toastsStore/SET_TOAST', response.message);
             }
         }
     }

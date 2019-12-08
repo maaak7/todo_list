@@ -38,8 +38,6 @@
 
         methods: {
             createCategory() {
-                console.log('ill create category');
-
                 this.$store.dispatch('categoriesStore/CREATE', {
                     name: this.categoryName,
                     callback: this.afterCreate,
@@ -47,7 +45,6 @@
             },
 
             afterCreate(response) {
-                console.log('afterCreate');
                 this.$store.commit('toastsStore/SET_TOAST', response.message);
             }
         }

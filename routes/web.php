@@ -26,11 +26,8 @@ Route::group(['prefix' => 'categories', 'middleware' => 'verified'], function ()
 });
 
 Route::group(['prefix' => 'tasks', 'middleware' => 'verified'], function () {
+    Route::get('/get', 'TaskController@get');
     Route::post('/create', 'TaskController@create');
+    Route::post('/change_status', 'TaskController@changeStatus');
     Route::get('/{any?}', 'HomeController@index');
 });
-
-//Route::group(['prefix' => 'categories'], function () {
-//    Route::get('/edit/{id}', 'HomeController@index');
-//    Route::get('/{any?}', 'HomeController@index');
-//});

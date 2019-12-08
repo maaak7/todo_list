@@ -1,19 +1,42 @@
 <template>
     <div class="list-group">
-        <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-                <input class="form-check-input position-static task-done" type="checkbox" value="option1">
-                <span class="task-name">List group item heading</span>
-                <small>3 days ago</small>
+        <div v-for="task in tasks" class="list-group-item">
+            <div>
+                <input @change="taskStatusChange($event, task)" :checked="task.done" class="form-check-input position-static task-done" type="checkbox" value="option1">
+                <span class="task-name">{{ task.name }}</span>
+                <small class="task-date">{{ task.created_at }}</small>
             </div>
-            <small>Donec id elit non mi porta.</small>
+            <span v-for="category in task.categories" class="badge badge-secondary category-badge">{{ category.name }}</span>
         </div>
     </div>
 </template>
 
+<script>
+    import {mapGetters} from 'vuex';
+
+    export default {
+        created() {
+            this.$store.dispatch('tasksStore/GET');
+        },
+
+        computed: {
+            ...mapGetters({tasks: 'tasksStore/TASKS'}),
+        },
+
+        methods: {
+            taskStatusChange(event, task) {
+                this.$store.dispatch('tasksStore/CHANGE_STATUS', {
+                    taskID: task.id,
+                });
+            }
+        }
+    }
+</script>
+
 <style>
     .list-group {
         width: 400px;
+        margin: auto;
     }
 
     .task-done {
@@ -21,6 +44,14 @@
     }
 
     .task-name {
-        margin-left: -75px;
+        margin-left: 15px;
+    }
+
+    .task-date {
+        float: right;
+    }
+
+    .category-badge {
+        margin-right: 5px;
     }
 </style>
